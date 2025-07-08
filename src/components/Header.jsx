@@ -1,7 +1,8 @@
 import React from 'react';
-import { Plus, RefreshCw, Home } from 'lucide-react';
+import { Plus, RefreshCw, Home, LogOut } from 'lucide-react';
 
-const Header = ({ loading, onRefresh, onAddPlaylist, onBackToLanding }) => {
+// const Header = ({ loading, onRefresh, onAddPlaylist, onBackToLanding }) => {
+  const Header = ({ loading, onRefresh, onAddPlaylist, onLogout }) => {
   return (
     <header className="bg-gray-800 border-b border-gray-700 px-6 py-4">
       <div className="flex items-center justify-between">
@@ -33,6 +34,14 @@ const Header = ({ loading, onRefresh, onAddPlaylist, onBackToLanding }) => {
           >
             <Plus size={20} />
             Add Playlist
+          </button>
+          <button
+            onClick={onLogout}
+            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
+            title="Logout"
+          >
+            <LogOut size={16} />
+            Logout
           </button>
         </div>
       </div>

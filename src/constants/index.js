@@ -1,7 +1,8 @@
 import { Music, Film, BookOpen, Star, Menu, Headphones, GraduationCap, MoreHorizontal } from 'lucide-react';
 
 export const GROUP_ID = 36;
-export const API_BASE = 'https://webfmsi.singapoly.com/api/playlist';
+// export const API_BASE = 'https://webfmsi.singapoly.com/api/playlist';
+export const API_BASE = 'http://127.0.0.1:5000';
 
 export const GENRES = ['music', 'song', 'movie', 'education', 'others'];
 

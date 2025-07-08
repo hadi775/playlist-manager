@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { usePlaylist } from '../hooks/usePlaylist';
 import Sidebar from './Sidebar';
 import Header from './Header';
@@ -6,7 +6,9 @@ import PlaylistForm from './PlaylistForm';
 import PlaylistGrid from './PlaylistGrid';
 import FloatingButton from './FloatingButton';
 
-const PlaylistApp = ({ onBackToLanding }) => {
+// const PlaylistApp = ({ onBackToLanding }) => {
+  const PlaylistApp = ({ onLogout }) => {
+    console.log("KOMPONEN PLAYLISTAPP BERHASIL DI-RENDER!");
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeNav, setActiveNav] = useState('all');
 
@@ -57,7 +59,7 @@ const PlaylistApp = ({ onBackToLanding }) => {
           loading={loading}
           onRefresh={handleRefresh}
           onAddPlaylist={handleAddPlaylist}
-          onBackToLanding={onBackToLanding}
+          onLogout={onLogout}
         />
 
         <main className="flex-1 overflow-auto p-6">
