@@ -1,24 +1,18 @@
-import React from 'react';
-import { Plus, RefreshCw, Home, LogOut } from 'lucide-react';
+// src/components/Header.jsx
 
-// const Header = ({ loading, onRefresh, onAddPlaylist, onBackToLanding }) => {
-  const Header = ({ loading, onRefresh, onAddPlaylist, onLogout }) => {
+import React from 'react';
+import { Plus, RefreshCw, LogOut } from 'lucide-react';
+
+const Header = ({ loading, onRefresh, onAddPlaylist, onLogout }) => {
   return (
     <header className="bg-gray-800 border-b border-gray-700 px-6 py-4">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <button
-            onClick={onBackToLanding}
-            className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded-lg font-medium transition-colors flex items-center gap-2"
-            title="Back to Landing Page"
-          >
-            <Home size={16} />
-          </button>
-          <div>
-            <h1 className="text-2xl font-bold text-white">Your Playlist</h1>
-            <p className="text-gray-400">Manage your entertainment collection</p>
-          </div>
+        {/* HAPUS TOMBOL "HOME" DARI DALAM DIV INI */}
+        <div>
+          <h1 className="text-2xl font-bold text-white">Your Playlist</h1>
+          <p className="text-gray-400">Manage your entertainment collection</p>
         </div>
+
         <div className="flex gap-3">
           <button
             onClick={onRefresh}
